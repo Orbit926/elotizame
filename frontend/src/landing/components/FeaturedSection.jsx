@@ -15,7 +15,7 @@ export default function FeaturedSection({ data, business }) {
     <Box
       sx={{
         py: { xs: 8, md: 10 },
-        background: 'linear-gradient(180deg, #FFF8E1 0%, #FFFFFF 100%)',
+        background: 'linear-gradient(180deg, #0D0D0D 0%, #1A1A1A 100%)',
       }}
     >
       <Container maxWidth="lg">
@@ -27,13 +27,12 @@ export default function FeaturedSection({ data, business }) {
           viewport={{ once: true, amount: 0.3 }}
           sx={{ textAlign: 'center', mb: { xs: 4, md: 5 } }}
         >
-          <Typography variant="h2" sx={{ mb: 1 }}>
+          <Typography variant="h2" sx={{ mb: 1, color: 'white' }}>
             {data.title}
           </Typography>
           <Typography
             variant="body1"
-            color="text.secondary"
-            sx={{ maxWidth: 500, mx: 'auto' }}
+            sx={{ maxWidth: 500, mx: 'auto', color: 'rgba(255,255,255,0.6)' }}
           >
             {data.subtitle}
           </Typography>

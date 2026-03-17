@@ -83,7 +83,7 @@ export default function LocationSection({ data }) {
             >
               {/* Address */}
               <Stack direction="row" spacing={2} alignItems="flex-start" sx={{ mb: 3 }}>
-                <LocationOnIcon sx={{ color: 'primary.main', fontSize: 28, mt: 0.3 }} />
+                <LocationOnIcon sx={{ color: '#F4C542', fontSize: 28, mt: 0.3 }} />
                 <Box>
                   <Typography variant="h6" sx={{ fontWeight: 700, mb: 0.5, fontSize: '1rem' }}>
                     Dirección
@@ -99,7 +99,7 @@ export default function LocationSection({ data }) {
 
               {/* Schedule */}
               <Stack direction="row" spacing={2} alignItems="flex-start" sx={{ mb: 4 }}>
-                <AccessTimeIcon sx={{ color: 'primary.main', fontSize: 28, mt: 0.3 }} />
+                <AccessTimeIcon sx={{ color: '#F4C542', fontSize: 28, mt: 0.3 }} />
                 <Box>
                   <Typography variant="h6" sx={{ fontWeight: 700, mb: 0.5, fontSize: '1rem' }}>
                     Horarios
@@ -115,7 +115,6 @@ export default function LocationSection({ data }) {
               {/* CTA */}
               <Button
                 variant="contained"
-                color="primary"
                 size="large"
                 startIcon={<DirectionsIcon />}
                 href={data.googleMapsLink}
@@ -127,9 +126,14 @@ export default function LocationSection({ data }) {
                   py: 1.5,
                   textTransform: 'none',
                   fontSize: '1rem',
+                  bgcolor: '#0D0D0D',
+                  color: '#F4C542',
+                  '&:hover': {
+                    bgcolor: '#1A1A1A',
+                  },
                 }}
               >
-                Cómo llegar
+                Abrir en Google Maps
               </Button>
             </MotionPaper>
           </Grid>

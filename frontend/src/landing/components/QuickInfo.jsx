@@ -57,7 +57,7 @@ export default function QuickInfo({ data }) {
                 <IconComponent
                   sx={{
                     fontSize: 32,
-                    color: 'secondary.main',
+                    color: '#F4C542',
                     mb: 1,
                   }}
                 />

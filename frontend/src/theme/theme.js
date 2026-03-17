@@ -3,25 +3,25 @@ import { createTheme } from '@mui/material/styles';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#D32F2F',
-      light: '#FF6659',
-      dark: '#9A0007',
-      contrastText: '#FFFFFF',
+      main: '#F4C542',
+      light: '#FFD970',
+      dark: '#C9A235',
+      contrastText: '#0D0D0D',
     },
     secondary: {
-      main: '#FF8F00',
-      light: '#FFC046',
-      dark: '#C56000',
-      contrastText: '#000000',
+      main: '#4CAF50',
+      light: '#81C784',
+      dark: '#388E3C',
+      contrastText: '#FFFFFF',
     },
     background: {
       default: '#FAFAFA',
       paper: '#FFFFFF',
-      dark: '#1A1A1A',
+      dark: '#0D0D0D',
       warm: '#FFF8E1',
     },
     text: {
-      primary: '#1A1A1A',
+      primary: '#0D0D0D',
       secondary: '#555555',
       light: '#FFFFFF',
     },
@@ -32,21 +32,21 @@ const theme = createTheme({
   typography: {
     fontFamily: '"Inter", "Roboto", "Helvetica", "Arial", sans-serif',
     h1: {
-      fontWeight: 800,
-      fontSize: '3rem',
-      lineHeight: 1.1,
-      letterSpacing: '-0.02em',
+      fontWeight: 900,
+      fontSize: '3.5rem',
+      lineHeight: 1.05,
+      letterSpacing: '-0.03em',
       '@media (max-width:600px)': {
-        fontSize: '2rem',
+        fontSize: '2.2rem',
       },
     },
     h2: {
-      fontWeight: 700,
-      fontSize: '2.25rem',
-      lineHeight: 1.2,
-      letterSpacing: '-0.01em',
+      fontWeight: 800,
+      fontSize: '2.5rem',
+      lineHeight: 1.15,
+      letterSpacing: '-0.02em',
       '@media (max-width:600px)': {
-        fontSize: '1.75rem',
+        fontSize: '1.8rem',
       },
     },
     h3: {
@@ -70,7 +70,7 @@ const theme = createTheme({
       lineHeight: 1.5,
     },
     button: {
-      fontWeight: 600,
+      fontWeight: 700,
       textTransform: 'none',
     },
   },

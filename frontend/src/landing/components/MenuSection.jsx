@@ -59,12 +59,12 @@ export default function MenuSection({ items, categories }) {
                 fontWeight: 600,
                 fontSize: '0.85rem',
                 px: 1,
-                bgcolor: activeCategory === cat ? 'primary.main' : 'transparent',
-                color: activeCategory === cat ? 'white' : 'text.secondary',
+                bgcolor: activeCategory === cat ? '#0D0D0D' : 'transparent',
+                color: activeCategory === cat ? '#F4C542' : 'text.secondary',
                 border: '1.5px solid',
-                borderColor: activeCategory === cat ? 'primary.main' : 'divider',
+                borderColor: activeCategory === cat ? '#0D0D0D' : 'divider',
                 '&:hover': {
-                  bgcolor: activeCategory === cat ? 'primary.dark' : 'rgba(0,0,0,0.04)',
+                  bgcolor: activeCategory === cat ? '#1A1A1A' : 'rgba(0,0,0,0.04)',
                 },
                 transition: 'all 0.2s ease',
               }}

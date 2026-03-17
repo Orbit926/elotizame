@@ -3,8 +3,9 @@ import landingContent from './data/landingContent';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import QuickInfo from './components/QuickInfo';
-import MenuSection from './components/MenuSection';
 import FeaturedSection from './components/FeaturedSection';
+import MenuSection from './components/MenuSection';
+import Events from './components/Events';
 import AboutBusiness from './components/AboutBusiness';
 import LocationSection from './components/LocationSection';
 import ContactCTA from './components/ContactCTA';
@@ -20,6 +21,7 @@ export default function LandingPage() {
     menuItems,
     menuCategories,
     featured,
+    events,
     about,
     location,
     contactCTA,
@@ -31,8 +33,9 @@ export default function LandingPage() {
       <Navbar data={navbar} business={business} />
       <Hero data={hero} business={business} />
       <QuickInfo data={quickInfo} />
-      <MenuSection items={menuItems} categories={menuCategories} />
       <FeaturedSection data={featured} business={business} />
+      <MenuSection items={menuItems} categories={menuCategories} />
+      <Events data={events} business={business} />
       <AboutBusiness data={about} />
       <LocationSection data={location} />
       <ContactCTA data={contactCTA} business={business} />

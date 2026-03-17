@@ -18,7 +18,7 @@ export default function Hero({ data, business }) {
       id="hero"
       sx={{
         position: 'relative',
-        minHeight: { xs: '90vh', md: '85vh' },
+        minHeight: { xs: '100vh', md: '90vh' },
         display: 'flex',
         alignItems: 'center',
         overflow: 'hidden',
@@ -47,7 +47,7 @@ export default function Hero({ data, business }) {
           position: 'absolute',
           inset: 0,
           background:
-            'linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0.85) 100%)',
+            'linear-gradient(to bottom, rgba(13,13,13,0.6) 0%, rgba(13,13,13,0.75) 60%, rgba(13,13,13,0.92) 100%)',
           zIndex: 1,
         }}
       />
@@ -70,13 +70,14 @@ export default function Hero({ data, business }) {
               <Chip
                 label={data.badge}
                 sx={{
-                  bgcolor: 'rgba(255,255,255,0.15)',
-                  color: 'white',
-                  fontWeight: 600,
+                  bgcolor: 'rgba(244,197,66,0.2)',
+                  color: '#F4C542',
+                  fontWeight: 700,
                   fontSize: '0.9rem',
                   backdropFilter: 'blur(8px)',
+                  border: '1px solid rgba(244,197,66,0.3)',
                   px: 1,
-                  height: 36,
+                  height: 38,
                 }}
               />
             </MotionBox>
@@ -88,8 +89,9 @@ export default function Hero({ data, business }) {
             variants={heroText}
             sx={{
               color: 'white',
-              maxWidth: 700,
+              maxWidth: 750,
               textShadow: '0 2px 20px rgba(0,0,0,0.3)',
+              '& span': { color: '#F4C542' },
             }}
           >
             {data.headline}
@@ -100,10 +102,10 @@ export default function Hero({ data, business }) {
             variant="h6"
             variants={heroText}
             sx={{
-              color: 'rgba(255,255,255,0.85)',
+              color: 'rgba(255,255,255,0.8)',
               fontWeight: 400,
-              maxWidth: 550,
-              lineHeight: 1.6,
+              maxWidth: 580,
+              lineHeight: 1.7,
               fontSize: { xs: '1rem', md: '1.15rem' },
             }}
           >
@@ -115,7 +117,7 @@ export default function Hero({ data, business }) {
             direction={{ xs: 'column', sm: 'row' }}
             spacing={2}
             variants={heroText}
-            sx={{ pt: 1, width: { xs: '100%', sm: 'auto' } }}
+            sx={{ pt: 2, width: { xs: '100%', sm: 'auto' } }}
           >
             <Button
               variant="contained"
@@ -128,12 +130,12 @@ export default function Hero({ data, business }) {
                 borderRadius: 50,
                 fontWeight: 700,
                 px: { xs: 4, md: 5 },
-                py: 1.5,
-                fontSize: '1.05rem',
+                py: 1.8,
+                fontSize: '1.1rem',
                 boxShadow: '0 4px 20px rgba(37,211,102,0.35)',
                 '&:hover': {
                   boxShadow: '0 6px 28px rgba(37,211,102,0.45)',
-                  transform: 'translateY(-1px)',
+                  transform: 'translateY(-2px)',
                 },
                 transition: 'all 0.2s ease',
               }}
@@ -153,13 +155,13 @@ export default function Hero({ data, business }) {
                 borderRadius: 50,
                 fontWeight: 600,
                 px: { xs: 4, md: 5 },
-                py: 1.5,
+                py: 1.8,
                 fontSize: '1.05rem',
-                color: 'white',
-                borderColor: 'rgba(255,255,255,0.5)',
+                color: '#F4C542',
+                borderColor: 'rgba(244,197,66,0.5)',
                 '&:hover': {
-                  borderColor: 'white',
-                  bgcolor: 'rgba(255,255,255,0.1)',
+                  borderColor: '#F4C542',
+                  bgcolor: 'rgba(244,197,66,0.1)',
                 },
               }}
             >

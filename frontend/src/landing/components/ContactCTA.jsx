@@ -38,7 +38,7 @@ export default function ContactCTA({ data, business }) {
           position: 'absolute',
           inset: 0,
           background:
-            'linear-gradient(to bottom, rgba(211,47,47,0.88) 0%, rgba(154,0,7,0.92) 100%)',
+            'linear-gradient(to bottom, rgba(13,13,13,0.88) 0%, rgba(13,13,13,0.95) 100%)',
         }}
       />
 
@@ -56,7 +56,7 @@ export default function ContactCTA({ data, business }) {
             <Typography
               variant="h2"
               sx={{
-                color: 'white',
+                color: '#F4C542',
                 mb: 1,
                 textShadow: '0 2px 10px rgba(0,0,0,0.2)',
               }}
@@ -126,7 +126,7 @@ export default function ContactCTA({ data, business }) {
                 color: 'white',
                 borderColor: 'rgba(255,255,255,0.6)',
                 '&:hover': {
-                  borderColor: 'white',
+                  borderColor: '#F4C542',
                   bgcolor: 'rgba(255,255,255,0.1)',
                 },
               }}

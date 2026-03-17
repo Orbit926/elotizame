@@ -1,6 +1,6 @@
 import { Card, CardMedia, CardContent, Typography, Box, Chip } from '@mui/material';
 import { motion } from 'framer-motion';
-import { staggerItem, cardHover } from '../animations/variants';
+import { staggerItem } from '../animations/variants';
 
 const MotionCard = motion.create(Card);
 
@@ -8,8 +8,7 @@ export default function MenuCard({ item }) {
   return (
     <MotionCard
       variants={staggerItem}
-      initial="rest"
-      whileHover="hover"
+      whileHover={{ y: -4, transition: { duration: 0.3 } }}
       sx={{
         height: '100%',
         display: 'flex',
@@ -18,9 +17,10 @@ export default function MenuCard({ item }) {
         cursor: 'default',
         border: '1px solid',
         borderColor: 'divider',
-        transition: 'box-shadow 0.3s ease',
+        transition: 'all 0.3s ease',
         '&:hover': {
           boxShadow: '0 8px 30px rgba(0,0,0,0.12)',
+          borderColor: 'rgba(244,197,66,0.3)',
         },
       }}
     >
@@ -30,6 +30,7 @@ export default function MenuCard({ item }) {
           height="180"
           image={item.image}
           alt={item.name}
+          loading="lazy"
           sx={{
             objectFit: 'cover',
             transition: 'transform 0.4s ease',
@@ -44,8 +45,8 @@ export default function MenuCard({ item }) {
               position: 'absolute',
               top: 12,
               left: 12,
-              bgcolor: 'primary.main',
-              color: 'white',
+              bgcolor: '#F4C542',
+              color: '#0D0D0D',
               fontWeight: 700,
               fontSize: '0.75rem',
             }}
@@ -65,7 +66,7 @@ export default function MenuCard({ item }) {
             variant="h6"
             sx={{
               fontWeight: 800,
-              color: 'primary.main',
+              color: '#4CAF50',
               fontSize: '1.1rem',
               whiteSpace: 'nowrap',
             }}

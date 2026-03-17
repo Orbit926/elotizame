@@ -1,7 +1,6 @@
 import { Box, Container, Typography, Stack, IconButton, Link } from '@mui/material';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../animations/variants';
 
@@ -10,7 +9,6 @@ const MotionBox = motion.create(Box);
 const socialIcons = {
   instagram: InstagramIcon,
   facebook: FacebookIcon,
-  tiktok: MusicNoteIcon,
 };
 
 export default function Footer({ data, business }) {
@@ -18,9 +16,10 @@ export default function Footer({ data, business }) {
     <Box
       component="footer"
       sx={{
-        bgcolor: 'background.dark',
+        bgcolor: '#0D0D0D',
         color: 'white',
         py: { xs: 5, md: 6 },
+        borderTop: '1px solid rgba(244,197,66,0.1)',
       }}
     >
       <Container maxWidth="lg">
@@ -34,7 +33,7 @@ export default function Footer({ data, business }) {
           {/* Business Name */}
           <Typography
             variant="h5"
-            sx={{ fontWeight: 800, mb: 1, letterSpacing: '-0.01em' }}
+            sx={{ fontWeight: 800, mb: 1, letterSpacing: '-0.01em', color: '#F4C542' }}
           >
             {business.name}
           </Typography>
@@ -62,9 +61,9 @@ export default function Footer({ data, business }) {
                     color: 'rgba(255,255,255,0.6)',
                     border: '1px solid rgba(255,255,255,0.15)',
                     '&:hover': {
-                      color: 'white',
-                      bgcolor: 'rgba(255,255,255,0.1)',
-                      borderColor: 'rgba(255,255,255,0.3)',
+                      color: '#F4C542',
+                      bgcolor: 'rgba(244,197,66,0.08)',
+                      borderColor: 'rgba(244,197,66,0.3)',
                     },
                     transition: 'all 0.2s ease',
                   }}
@@ -97,7 +96,7 @@ export default function Footer({ data, business }) {
                   color: 'rgba(255,255,255,0.5)',
                   fontSize: '0.85rem',
                   fontWeight: 500,
-                  '&:hover': { color: 'white' },
+                  '&:hover': { color: '#F4C542' },
                   transition: 'color 0.2s ease',
                 }}
               >
@@ -111,7 +110,7 @@ export default function Footer({ data, business }) {
             sx={{
               width: 60,
               height: 2,
-              bgcolor: 'rgba(255,255,255,0.1)',
+              bgcolor: 'rgba(244,197,66,0.2)',
               mx: 'auto',
               mb: 3,
               borderRadius: 1,
@@ -121,10 +120,28 @@ export default function Footer({ data, business }) {
           {/* Copyright */}
           <Typography
             variant="body2"
-            sx={{ color: 'rgba(255,255,255,0.35)', fontSize: '0.8rem' }}
+            sx={{ color: 'rgba(255,255,255,0.35)', fontSize: '0.8rem', mb: 1.5 }}
           >
             {data.copyright}
           </Typography>
+
+          {/* Made by Orbit */}
+          {data.madeBy && (
+            <Link
+              href={data.madeBy.href}
+              target="_blank"
+              underline="none"
+              sx={{
+                color: 'rgba(255,255,255,0.3)',
+                fontSize: '0.75rem',
+                fontWeight: 500,
+                '&:hover': { color: 'rgba(255,255,255,0.6)' },
+                transition: 'color 0.2s ease',
+              }}
+            >
+              {data.madeBy.label}
+            </Link>
+          )}
         </MotionBox>
       </Container>
     </Box>

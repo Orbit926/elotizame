@@ -38,6 +38,7 @@ export default function AboutBusiness({ data }) {
                 component="img"
                 src={data.image}
                 alt={data.title}
+                loading="lazy"
                 sx={{
                   width: '100%',
                   height: { xs: 280, md: 420 },
@@ -59,7 +60,7 @@ export default function AboutBusiness({ data }) {
               <Typography
                 variant="overline"
                 sx={{
-                  color: 'primary.main',
+                  color: '#4CAF50',
                   fontWeight: 700,
                   letterSpacing: '0.1em',
                   mb: 1,
@@ -100,13 +101,14 @@ export default function AboutBusiness({ data }) {
                         display: 'flex',
                         alignItems: 'center',
                         gap: 1,
-                        bgcolor: 'background.warm',
+                        bgcolor: 'rgba(244,197,66,0.08)',
+                        border: '1px solid rgba(244,197,66,0.15)',
                         px: 2,
                         py: 1,
                         borderRadius: 50,
                       }}
                     >
-                      <IconComp sx={{ fontSize: 20, color: 'secondary.main' }} />
+                      <IconComp sx={{ fontSize: 20, color: '#F4C542' }} />
                       <Typography variant="body2" sx={{ fontWeight: 600, fontSize: '0.85rem' }}>
                         {h.label}
                       </Typography>

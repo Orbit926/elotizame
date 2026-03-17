@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import {
   AppBar,
   Toolbar,
@@ -11,7 +11,6 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
-  Typography,
   useScrollTrigger,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -47,7 +46,7 @@ export default function Navbar({ data, business }) {
         transition={{ duration: 0.5, ease: 'easeOut' }}
         sx={{
           background: trigger
-            ? 'rgba(26, 26, 26, 0.95)'
+            ? 'rgba(13, 13, 13, 0.95)'
             : 'rgba(0, 0, 0, 0.3)',
           backdropFilter: 'blur(12px)',
           transition: 'background 0.3s ease',
@@ -55,9 +54,8 @@ export default function Navbar({ data, business }) {
       >
         <Container maxWidth="lg">
           <Toolbar disableGutters sx={{ justifyContent: 'space-between', minHeight: { xs: 64, md: 72 } }}>
-            {/* Logo / Name */}
-            <Typography
-              variant="h6"
+            {/* Logo */}
+            <Box
               component="a"
               href="#hero"
               onClick={(e) => {
@@ -65,18 +63,40 @@ export default function Navbar({ data, business }) {
                 handleNavClick('#hero');
               }}
               sx={{
-                color: 'white',
+                display: 'flex',
+                alignItems: 'center',
                 textDecoration: 'none',
-                fontWeight: 800,
-                fontSize: { xs: '1.1rem', md: '1.3rem' },
-                letterSpacing: '-0.01em',
+                cursor: 'pointer',
               }}
             >
-              {business.name}
-            </Typography>
+              {data.logo ? (
+                <Box
+                  component="img"
+                  src={data.logo}
+                  alt={business.name}
+                  loading="lazy"
+                  sx={{
+                    height: { xs: 40, md: 48 },
+                    width: 'auto',
+                    objectFit: 'contain',
+                  }}
+                />
+              ) : (
+                <Box
+                  sx={{
+                    color: 'white',
+                    fontWeight: 800,
+                    fontSize: { xs: '1.1rem', md: '1.3rem' },
+                    letterSpacing: '-0.01em',
+                  }}
+                >
+                  {business.name}
+                </Box>
+              )}
+            </Box>
 
             {/* Desktop Nav */}
-            <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', gap: 1 }}>
+            <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', gap: 0.5 }}>
               {data.links.map((link) => (
                 <Button
                   key={link.href}
@@ -85,12 +105,13 @@ export default function Navbar({ data, business }) {
                     color: 'rgba(255,255,255,0.85)',
                     fontWeight: 500,
                     fontSize: '0.9rem',
-                    px: 2,
+                    px: 1.5,
                     borderRadius: 2,
                     '&:hover': {
-                      color: 'white',
-                      backgroundColor: 'rgba(255,255,255,0.1)',
+                      color: '#F4C542',
+                      backgroundColor: 'rgba(244,197,66,0.08)',
                     },
+                    transition: 'all 0.2s ease',
                   }}
                 >
                   {link.label}
@@ -139,12 +160,20 @@ export default function Navbar({ data, business }) {
           sx: {
             width: '80%',
             maxWidth: 320,
-            bgcolor: '#1A1A1A',
+            bgcolor: '#0D0D0D',
             color: 'white',
           },
         }}
       >
-        <Box sx={{ p: 2, display: 'flex', justifyContent: 'flex-end' }}>
+        <Box sx={{ p: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          {data.logo && (
+            <Box
+              component="img"
+              src={data.logo}
+              alt={business.name}
+              sx={{ height: 36, width: 'auto' }}
+            />
+          )}
           <IconButton onClick={() => setDrawerOpen(false)} sx={{ color: 'white' }}>
             <CloseIcon />
           </IconButton>
@@ -157,7 +186,7 @@ export default function Navbar({ data, business }) {
                 sx={{
                   py: 1.5,
                   borderRadius: 2,
-                  '&:hover': { bgcolor: 'rgba(255,255,255,0.08)' },
+                  '&:hover': { bgcolor: 'rgba(244,197,66,0.1)' },
                 }}
               >
                 <ListItemText
