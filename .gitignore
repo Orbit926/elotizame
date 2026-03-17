@@ -1,0 +1,57 @@
+# -------------------------------------------------
+# LOGS Y ARCHIVOS DEL FRONTEND
+# -------------------------------------------------
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+.env
+
+# Editor dirs
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# -------------------------------------------------
+# TERRAFORM — ARCHIVOS QUE NO SE DEBEN SUBIR
+# -------------------------------------------------
+
+# Directorio interno de terraform
+.terraform/
+*/.terraform/*
+**/.terraform/*
+
+# Archivos de estado (NO subir jamás)
+*.tfstate
+*.tfstate.backup
+
+# Logs de fallos
+crash.log
+crash.*.log
+
+# Variables locales (sensibles, por ambiente)
+*.tfvars
+terraform.tfvars
+
+# Archivos generados por Terraform
+stack-outputs.txt
+
+# -------------------------------------------------
+# ARCHIVOS QUE SÍ SE SUBEN
+# (No los ignores)
+# -------------------------------------------------
+# terraform.lock.hcl  ← se SUBE (asegura versiones de provider)
