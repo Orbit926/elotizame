@@ -18,7 +18,7 @@ export default function Hero({ data, business }) {
       id="hero"
       sx={{
         position: 'relative',
-        minHeight: { xs: '100vh', md: '90vh' },
+        minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',
         overflow: 'hidden',

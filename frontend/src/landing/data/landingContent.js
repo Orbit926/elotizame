@@ -52,7 +52,7 @@ const landingContent = {
     {
       icon: 'Schedule',
       label: 'Horario',
-      value: 'Lun - Dom · 12:00 - 22:00',
+      value: 'Lun - Dom · 14:00 - 21:00',
     },
     {
       icon: 'LocationOn',
@@ -67,7 +67,7 @@ const landingContent = {
     {
       icon: 'Phone',
       label: 'Teléfono',
-      value: '33 1234 5678',
+      value: '33 2597 9699',
     },
   ],
 
@@ -223,8 +223,7 @@ const landingContent = {
       'https://www.google.com/maps?q=Elotizame,+Av+de+la+Presa+1953,+Guadalajara,+Jalisco&output=embed&z=17',
     googleMapsLink: 'https://www.google.com/maps/search/?api=1&query=Elotizame+Guadalajara',
     schedule: [
-      { days: 'Lunes a Viernes', hours: '12:00 - 22:00' },
-      { days: 'Sábado y Domingo', hours: '11:00 - 23:00' },
+      { days: 'Lunes a Domingo', hours: '14:00 - 21:00' },
     ],
   },
 

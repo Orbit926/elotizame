@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Box, Container, Typography, Chip, Stack } from '@mui/material';
 import Grid from '@mui/material/Grid';
-import { motion, AnimatePresence } from 'framer-motion';
-import { fadeInUp, staggerContainer } from '../animations/variants';
+import { motion } from 'framer-motion';
+import { fadeInUp } from '../animations/variants';
 import MenuCard from '../cards/MenuCard';
 
 const MotionBox = motion.create(Box);
@@ -76,19 +76,12 @@ export default function MenuSection({ items, categories }) {
         <Grid
           container
           spacing={3}
-          component={motion.div}
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
         >
-          <AnimatePresence mode="wait">
-            {filteredItems.map((item) => (
-              <Grid key={item.id} size={{ xs: 6, sm: 6, md: 4, lg: 3 }}>
-                <MenuCard item={item} />
-              </Grid>
-            ))}
-          </AnimatePresence>
+          {filteredItems.map((item) => (
+            <Grid key={item.id} size={{ xs: 6, sm: 6, md: 4, lg: 3 }}>
+              <MenuCard item={item} />
+            </Grid>
+          ))}
         </Grid>
       </Container>
     </Box>
